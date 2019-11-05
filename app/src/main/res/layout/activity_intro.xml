@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryLight"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:fillViewport="true">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_margin="10dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/podium" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Porque viver é uma meta!"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:textAlignment="center"
+        android:text="“Faremos do seu sacrifício um divertido jogo, onde serão apresentados objetivos reais e o grande prêmio é a satisfação de uma ou várias metas realizadas em sua vida.” " />
+
+    <Button
+        android:id="@+id/botaoProximo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AVANÇAR" />
+
+</LinearLayout>

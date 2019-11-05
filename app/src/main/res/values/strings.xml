@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">AppLife</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+
+    <string name="nomecompleto">Nome Completo</string>
+    <string name="apelido">Como você gostaria de ser chamado</string>
+    <string name="datadenascimento">Data de Nascimento</string>
+    <string name="sexo">Sexo</string>
+    <string name="email">Email</string>
+    <string name="tab_text_1">A Fazer</string>
+    <string name="tab_text_2">Feitas</string>
+    <string name="horainicial">hora inicial</string>
+    <string name="horafinal">hora final</string>
+    <string name="peso">peso atual</string>
+    <string name="pesodesejado">Peso Desejado</string>
+    <string name="title_activity_lista_tarefa">ListaTarefaActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_metas_">Metas_Activity</string>
+    <string name="title_activity_metas">MetasActivity</string>
+
+</resources>
