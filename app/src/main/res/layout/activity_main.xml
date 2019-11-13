@@ -8,27 +8,42 @@
     android:background="@color/colorPrimaryLight"
     android:orientation="vertical"
     tools:context=".MainActivity">
-    <TextView
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/message_pessoa"/>
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/Icone_Trabalho"
+            android:src="@drawable/icone_trabalho"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/Icone_Atividade_Fisica"
+            android:src="@drawable/icone_atividade_fisica"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/Icone_Estudo"
+            android:src="@drawable/icone_estudo"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/Icone_Ocio"
+            android:src="@drawable/icone_ocio"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/imagempessoa"
+        android:src="@drawable/icone_ocio"
         android:layout_weight="1"
-        android:src="@drawable/life"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:text="O que vai fazer agora?"/>
-
-    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="8"
-        android:src="@drawable/life" />
+        android:layout_height="match_parent" />
 
 </LinearLayout>
