@@ -2,10 +2,8 @@ package com.example.applife;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.opengl.ETC1;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -30,23 +28,19 @@ public class CadastroActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if(apelido.getText().toString() != "" && email.getText().toString() != "" && sexo.getCheckedRadioButtonId() != -1){
 
-                    RadioButton r = (RadioButton) sexo.getChildAt(sexo.getCheckedRadioButtonId());
+                    int selectedId = sexo.getCheckedRadioButtonId();
+                    RadioButton r = (RadioButton) findViewById(selectedId);
                     String selectedtext = r.getText().toString();
 
-                    cadastrar(apelido.getText().toString(),email.getText().toString(),selectedtext);
+                    cadastrar(new Usuario(apelido.getText().toString(),email.getText().toString(),selectedtext));
                 }
             }
         });
     }
 
-    private void cadastrar(String apelido, String email, String sexo) {
-        sharedPreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("apelido", apelido);
-        editor.putString("email", email);
-        editor.putString("sexo", sexo);
-        editor.commit();
-
+    private void cadastrar(Usuario usuario) {
+        DatabaseHandler db = new DatabaseHandler(this);
+        db.addUsuario(usuario);
         proximaTela();
     }
 
