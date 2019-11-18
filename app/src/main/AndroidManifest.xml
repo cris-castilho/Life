@@ -4,9 +4,8 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="app_Life"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:icon="@drawable/logo_life"
+        android:label="AppLife"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".SplashActivity">

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 
 import android.annotation.TargetApi;
+import android.app.AlertDialog;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -55,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 progresso++;
                 progressBar.setProgress(progresso);
+                validarConclusao(progresso);
                 if (sexo.contains("Masculino")){
                     imagemPessoa.setBackgroundResource(R.drawable.estudom);
                 }else{
@@ -67,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 progresso++;
                 progressBar.setProgress(progresso);
+                validarConclusao(progresso);
                 if (sexo.contains("Masculino")){
                     imagemPessoa.setBackgroundResource(R.drawable.atividadem);
                 }else{
@@ -79,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 progresso++;
                 progressBar.setProgress(progresso);
+                validarConclusao(progresso);
                 if (sexo.contains("Masculino")){
                     imagemPessoa.setBackgroundResource(R.drawable.imagem_trabalhom);
                 }else{
@@ -92,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 progresso++;
                 progressBar.setProgress(progresso);
+                validarConclusao(progresso);
                 if (sexo.contains("Masculino")){
                     imagemPessoa.setBackgroundResource(R.drawable.imagem_ociom);
                 }else{
@@ -99,12 +104,24 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+    }
 
-        progressBar.
+    private void validarConclusao(int progresso) {
+        if(progresso == 4)
+            modalVencedor();
+    }
+
+    public void modalVencedor(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        builder.setMessage("Parabéns você concluiu suas tarefas de hoje!!!!!!!")
+                .setTitle("Você é um campeão!");
+        AlertDialog dialog = builder.create();
+
+        dialog.show();
     }
 
     public void sendNotification(String title, String message) {
-
         NotificationCompat.Builder mBuilder =
                 new NotificationCompat.Builder(this);
 
